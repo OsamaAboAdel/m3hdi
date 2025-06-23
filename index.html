@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تطبيق معهدي</title>
+
+    <!-- favicon included here -->
+    <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon" />
+
+    <!-- apple touch icon included here -->
+    <link rel="apple-touch-icon" href="./assets/img/logo/favicon.png" />
+
+    <!-- All css files included here -->
+    <!-- Bootstrap  v5.2.1 css -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" />
+    <!-- slick slider css -->
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+    <link rel="stylesheet" href="./assets/css/slick-theme.css" />
+    <!-- swiper slider css -->
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <!-- pie progress css -->
+    <link rel="stylesheet" href="./assets/css/asPieProgress.min.css" />
+    <!-- VenoBox 2.0.4 css -->
+    <link rel="stylesheet" href="./assets/css/venobox.min.css" />
+    <!-- Light Box css -->
+    <link rel="stylesheet" href="./assets/css/lightbox.css" />
+    <!-- headline.css -->
+    <link rel="stylesheet" href="./assets/css/headline.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/css/animate.css" />
+    <!-- mobile fixes css -->
+    <link rel="stylesheet" href="./assets/css/mobile-fixes.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .typing-animation {
+            display: inline-block;
+            position: relative;
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            direction: rtl;
+            font-size: inherit;
+        }
+        .typing-animation.animate {
+            animation: typing 3s steps(20, end) forwards;
+        }
+        .typing-animation::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0px;
+            background-color: #003399;
+            animation: blink 0.75s step-end infinite;
+            opacity: 0;
+        }
+        .typing-animation.animate::after {
+            opacity: 1;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 40% }
+        }
+        @keyframes blink {
+            50% { background-color: transparent }
+        }
+
+        @media (max-width: 480px) {
+            @keyframes typing {
+            from { width: 0 }
+            to { width: 90% }
+        }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { 
+                threshold: 0.5,
+                rootMargin: '0px'
+            });
+
+            const typingElement = document.querySelector('.typing-animation');
+            if (typingElement) {
+                observer.observe(typingElement);
+            }
+        });
+    </script>
+</head>
+
+<body dir="rtl">
+    <div class="root">
+        <!-- <div class="staco-overly-bg"></div> -->
+        <!-- Header section start -->
+        <header class="header-section v2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container header-navbar-container">
+                                <a class="navbar-brand header-logo" href="index.html">
+                                    <img src="assets/img/logo/Madrasati_Logo.svg" alt="header-logo" style="width: 150px; height: auto;" />
+                                </a>
+
+                               
+
+                                <a id="nav-expander" class="nav-expander bar" href="#">
+                                    <img src="./assets/img/icons/menu.svg" alt="menu" />
+                                    <img src="./assets/img/icons/menu-close.svg" alt="menu" />
+                                </a>
+
+                                <div class="collapse navbar-collapse header-navbar-content" id="navbarSupportedContent">
+                                    <ul class="navbar-nav main-menu">
+                                        <li class="nav-item home-nav">
+                                            <a class="nav-link  megaTablinks" href="#home" data-menu="primaryText"> الرئيسية
+                                            </a>
+
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a class="nav-link dropdown-toggle" href="#feachers"> المميزات </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link dropdown-toggle" href="#app-users"> مستخدموا التطبيق </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#c-panal">لوحة التحكم</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#website">الموقع الإلكتروني</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#contact-us"> تواصل معنا</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="header-extra">
+
+                                        <li>
+                                            <a href="https://wa.me/967775595399" class="crypto2-blue-btn">
+                                                <span class="btn-inner">
+                                                    <span class="btn-normal-text">تواصل معنا</span>
+                                                    <span class="btn-hover-text">تواصل معنا</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header section end -->
+
+        <!-- Canvas Mobile Menu start -->
+        <nav class="right_menu_togle mobile-navbar-menu" id="mobile-navbar-menu">
+            <ul class="nav-menu">
+                <li class="current-menu-item">
+                    <a href="#home">الرئيسية</a>
+                </li>
+                <li><a href="#app-users"> مستخدموا التطبيق </a></li>
+                <li><a href="#c-panal">لوحة التحكم</a></li>
+                <li><a href="#website">الموقع الإلكتروني</a></li>
+                <li><a href="#contact-us"> تواصل معنا</a></li>
+            </ul>
+            <ul class="nav-buttons">
+                <li>
+                    <a href="https://wa.me/967775595399" class="crypto2-blue-btn">
+                        <span class="btn-inner">
+                            <span class="btn-normal-text">تواصل معنا</span>
+                            <span class="btn-hover-text">تواصل معنا</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Canvas Menu end -->
+
+        <!-- Hero section start -->
+        <section id="home" class="crypto2-hero-section" style="direction: ltr;">
+            <div class="container">
+                <div class="row flex-row-reverse">
+                    <div class="col-md-7" style="direction: rtl;" data-aos="fade-left" data-aos-delay="200">
+                        <div class="crypto2-hero-text">
+                            <h1 class="test">تطبيق معهدي <br> الأكـاديـمـــــــــــي</h1>
+                            <p>يغني المعهد ومنتسبيها عن جزء كبير من التعامل الورقي في المعهد واستبداله بالتعامل التقني
+                                الحديث</p>
+                            <div class="crypto2-banner-links d-none">
+                                <div class="crypto2-btn">
+                                    <a href="#" class="crypto2-banner-btn">
+                                        <span class="btn-inner">
+                                            <span class="btn-normal-text">تحميل التطبيق</span>
+                                            <span class="btn-hover-text">تحميل التطبيق</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <a href="#" class="os-link"><img src="./assets/img/crypto2/andriod-icon.svg"
+                                        alt="icon" /></a>
+                                <a href="#" class="os-link"><img src="./assets/img/crypto2/apple-icon.svg"
+                                        alt="icon" /></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5" data-aos="fade-right" data-aos-delay="400">
+                        <div class="crypto2-hero-left">
+                            <div class="crypto2-hero-img">
+                                <img src="./assets/img/madrasti/mobile-img.png" alt="icon" />
+                                <img src="./assets/img/madrasti/hat.png" alt="icon" class="coin1" />
+                                <img src="./assets/img/madrasti/idea.png" alt="icon" class="coin2" />
+                                <img src="./assets/img/madrasti/bag.png" alt="icon" class="coin3" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-overlay"></div>
+        </section>
+        <!-- Hero section end -->
+
+        <!-- Crypto Assets Section Start -->
+        <section class="crypto-assets-section">
+            <div class="container">
+                <div class="crypto-assets-box">
+                    <img src="./assets/img/crypto2/assets-bg-dots.svg" alt="img" class="dots-bg" />
+                    <img src="./assets/img/crypto2/fly-with.png" alt="img" class="coin-bg" style="height: auto; width: auto; max-width: 88%; max-height: 90%;"/>
+                    <img src="./assets/img/crypto2/blur.png" alt="img" class="blur-img" />
+                    <div class="cd-intro m-0">
+                        <h3 class="cd-headline slide mb-0">
+                            <span class="cd-words-wrapper">
+                                <b class="is-visible">انضم إلى تطبيق معهدي</b>
+                                <b>ودعنا نحلق بك عالياً</b>
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Crypto Assets Section End -->
+
+
+        <!-- Cross network section start -->
+        <section id="feachers" class="cross-network-section" data-aos="fade-up">
+            <div class="container">
+                <h3><span class="typing-animation">ميزات وخدمات التطبيق</span></h3>
+                <p>يقدم تطبيق معهدي الأكاديمي العديد من الخدمات التي تستفيد منها إدارة المعهد 
+                    ومنتسبوها من طلاب ومعلمين وأولياء أمور وغيرهم ويستطيعوا من خلالها القيام بمهامهم ومتابعتها أولاً بأول</p>
+            </div>
+            <div class="cross-network-logos" style="direction: ltr;" data-aos="fade-up" data-aos-delay="400">
+                <div class="cross-network-list">
+                    <div class="item"><img src="./assets/img/feachers/feacher-01.svg" alt="logo"></div> 
+                    <div class="item"><img src="./assets/img/feachers/feacher-02.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-03.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-04.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-05.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-06.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-07.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-08.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-09.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-10.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-11.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-12.svg" alt="logo"></div>
+                </div>
+                <div class="cross-network-list">
+                    <div class="item"><img src="./assets/img/feachers/feacher-01.svg" alt="logo"></div> 
+                    <div class="item"><img src="./assets/img/feachers/feacher-02.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-03.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-04.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-05.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-06.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-07.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-08.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-09.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-10.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-11.svg" alt="logo"></div>
+                    <div class="item"><img src="./assets/img/feachers/feacher-12.svg" alt="logo"></div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Cross network section end -->
+
+        <!-- Convert Visitors Section Start -->
+        <section id="app-users" class="app-convert-visitors-section" data-aos="fade-up">
+            <div class="container">
+                <div class="section-title crypto2 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <span class="sub-title">المستخدمين</span>
+                    <h2 class="title">كيف يستفيد المستخدمون <br> من تطبيق معهدي ؟</h2>
+                </div>
+                <div class="row flex-row-reverse">
+                    <div class="col-lg-9 col-md-8" data-aos="fade-left" data-aos-delay="300">
+                        <div class="convert-visitors-slider-right app">
+                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide slide-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="convert-visitors-img">
+                                                    <img src="./assets/img/app/madraati-phone-06.png" alt="img" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="convert-visitors-text">
+                                                    <div class="section-title">
+                                                        <h2 class="title">الخدمات التي يستفيد منها ولي الأمر والطالب</h2>
+                                                    </div>
+                                                    <p class="mb-3">كولي أمر بإمكاني من خلال تطبيق معهدي متابعة أبنائي أولاً بأول ومعرفة كل ما أحتاج معرفته عنهم</p>
+
+                                                        <div class="protect-data-section">
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/الدروس والواجبات.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>الـــــدروس والواجبات</p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/الحضور والغياب.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>الحضور والغياب</p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/نتائج الإختبارات.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>نـتــائــــــــج الإختبارات</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/البيانات المالية.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>البيانات الماليــة</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/المنهج والملخصات.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>كتب المنهج والملخصـات</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/جداول الحصص.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>جــــداول الحصص</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/ميزة الإشعارات.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>استقبــال الإشعارات</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/المخالفات والإبداع.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>المخالفات والإبــــــداع</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/اخبار المدرسة.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>معرفة أخبار الــمــدرســـــة</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide slide-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="convert-visitors-img">
+                                                    <img src="./assets/img/app/madraati-phone-06.png" alt="img" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="convert-visitors-text">
+                                                    <div class="section-title">
+                                                        <h2 class="title">الخدمات التي يستفيد منها المعلم</h2>
+                                                    </div>
+                                                    <p class="mb-3">كمعلم أستطيع أن اقوم بمهامي اليومية ومتابعتها من خلال هاتفي بدلاً عن الطرق التقليدية</p>
+
+                                                        <div class="protect-data-section">
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/الدروس والواجبات.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>رفع الدروس والواجبـــــات </p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/دفاتر التحضير.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>دفتر التحضير</p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/قائمة المهام.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>قائمة المهام</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/التقييم الشهري.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>تقييم الطلاب</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/المنهج والملخصات.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>مشاركة الملخصـات</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/جداول الحصص.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>جــــداول الحصص</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/ميزة الإشعارات.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>استقبــال الإشعارات</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/المخالفات والإبداع.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>المخالفات والإبــــــداع</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/اخبار المدرسة.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>معرفة أخبار الــمــدرســـــة</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide slide-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="convert-visitors-img">
+                                                    <img src="./assets/img/app/madraati-phone-06.png" alt="img" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="convert-visitors-text">
+                                                    <div class="section-title">
+                                                        <h2 class="title">الخدمات التي يستفيد منها المشرف الإداري</h2>
+                                                    </div>
+                                                    <p class="mb-3">كمشرف يمكنني أن أقوم بمهامي اليومية بكل سهولة عن طريق تطبيق معهدي بدلاً عن الأوراق</p>
+
+                                                        <div class="protect-data-section">
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/الدروس والواجبات.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p cl>متابعة رفع الدروس  </p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/الحضور والغياب.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>رفع الحضور والغياب</p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/التقييم الشهري.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>تقييم المعلمين</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/المراسلات.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>إرسال إشعارات</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/قائمة المهام.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>قائمة المهام</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/جداول الحصص.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>جدول الحصص والتغطيات</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/ميزة الإشعارات.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>استقبــال الإشعارات</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/المخالفات والإبداع.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>رفع المخالفات والإبداع</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/اخبار المدرسة.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>معرفة أخبار الــمــدرســـــة</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide slide-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="convert-visitors-img">
+                                                    <img src="./assets/img/app/madraati-phone-06.png" alt="img" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="convert-visitors-text">
+                                                    <div class="section-title">
+                                                        <h2 class="title">الخدمات التي يستفيد منها المشرف التربوي</h2>
+                                                    </div>
+                                                    <p class="mb-3">كمشرف تربوي أصبحت متابعة المعلمين والعملية التعليمية باستخدام تطبيق معهدي أكثر سهولة واحترافية </p>
+
+                                                        <div class="protect-data-section">
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/دفاتر التحضير.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>متابعة دفاتر التحضير</p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/التقييم الشهري.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>الزيارات الصفية</p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/قائمة المهام.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>قائمة المهام</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/البيانات المالية.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>متابعة الخطط المنهجية</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/المراسلات.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>إرسال إشعارات</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/ميزة الإشعارات.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>استقبــال الإشعارات</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/اخبار المدرسة.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>معرفة أخبار الــمــعـــهــد</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide slide-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="convert-visitors-img">
+                                                    <img src="./assets/img/app/madraati-phone-06.png" alt="img" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="convert-visitors-text">
+                                                    <div class="section-title">
+                                                        <h2 class="title">الخدمات التي يستفيد منها الأخصائي الاجتماعي</h2>
+                                                    </div>
+                                                    <p class="mb-3">كأخصائي اجتماعي أستطيع الآن أن أتابع الطلاب وأن أقوم بمهامي بكل سهولة عن طريق تطبيق معهدي</p>
+
+                                                        <div class="protect-data-section">
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/المراسلات.svg "
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>التواصل مع أولياء الأمور والطلاب</p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="protect-data-content">
+                                                                <div class="protect-data-img">
+                                                                    <img src="./assets/img/feachers icons/التقييم الشهري.svg"
+                                                                        alt="icon" />
+                                                                </div>
+                                                                <div class="protect-data-text">
+                                                                    <p>متابعة تقييمات الطلاب</p>
+                                                                </div>
+                                                            </div>
+    
+                                                        </div>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/ميزة الإشعارات.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>استقبــال الإشعارات</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/المخالفات والإبداع.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>رفع المخالفات والإبــــــداع </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="protect-data-section">                                                    
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/اخبار المدرسة.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>معرفة أخبار الــمــعـــهــد</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/قائمة المهام.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>قائمة المهام</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide slide-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="convert-visitors-img">
+                                                    <img src="./assets/img/app/madraati-phone-06.png" alt="img" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="convert-visitors-text">
+                                                    <div class="section-title">
+                                                        <h2 class="title">الخدمات التي يستفيد منها المدير والوكيل</h2>
+                                                    </div>
+                                                    <p class="mb-3">كإدارة المعهد أصبحت متابعة وإدارة المعهد أكثر سهولة واحترافية باستخدام تطبيق معهدي</p>
+
+                                                    <div class="protect-data-section">
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/المراسلات.svg "
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>التواصل مع منتسبي المعهد</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="protect-data-content">
+                                                            <div class="protect-data-img">
+                                                                <img src="./assets/img/feachers icons/التقييم الشهري.svg"
+                                                                    alt="icon" />
+                                                            </div>
+                                                            <div class="protect-data-text">
+                                                                <p>متابعة التقارير والإحصائيات</p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                <div class="protect-data-section">
+                                                    <div class="protect-data-content">
+                                                        <div class="protect-data-img">
+                                                            <img src="./assets/img/feachers icons/ميزة الإشعارات.svg"
+                                                                alt="icon" />
+                                                        </div>
+                                                        <div class="protect-data-text">
+                                                            <p> لوحة تحكم متكاملة</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="protect-data-content">
+                                                        <div class="protect-data-img">
+                                                            <img src="./assets/img/feachers icons/المخالفات والإبداع.svg"
+                                                                alt="icon" />
+                                                        </div>
+                                                        <div class="protect-data-text">
+                                                            <p>معرفة المخالفات والإبــــــداع </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="protect-data-section">                                                    
+                                                    <div class="protect-data-content">
+                                                        <div class="protect-data-img">
+                                                            <img src="./assets/img/feachers icons/اخبار المدرسة.svg"
+                                                                alt="icon" />
+                                                        </div>
+                                                        <div class="protect-data-text">
+                                                            <p>معرفة أخبار الــمــعـــهــد</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="protect-data-content">
+                                                        <div class="protect-data-img">
+                                                            <img src="./assets/img/feachers icons/قائمة المهام.svg"
+                                                                alt="icon" />
+                                                        </div>
+                                                        <div class="protect-data-text">
+                                                            <p>قائمة المهام</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="app-convert-visitors-nav">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper app-nav-list">
+                                    <div class="swiper-slide nav-item">
+                                        <button class="tab-btn"><span>ولي الأمر والطالب</span></button>
+                                    </div>
+                                    <div class="swiper-slide nav-item">
+                                        <button class="tab-btn"><span>المعلم</span></button>
+                                    </div>
+                                    <div class="swiper-slide nav-item">
+                                        <button class="tab-btn"><span> المشرف الإداري</span></button>
+                                    </div>
+                                    <div class="swiper-slide nav-item">
+                                        <button class="tab-btn"><span>المشرف التربوي</span></button>
+                                    </div>
+                                    <div class="swiper-slide nav-item">
+                                        <button class="tab-btn"><span>الأخصائي الاجتماعي</span></button>
+                                    </div>
+                                    <div class="swiper-slide nav-item">
+                                        <button class="tab-btn"><span>وكيل ومدير المعهد</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- Convert Visitors Section End -->
+
+        <!-- usability section start -->
+        <section id="c-panal" class="usability-section md-pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="usability-card">
+                            <div class="bg-shape">
+                                <div class="shape-img img-1">
+                                    <img src="./assets//img/main-demo/shape1.png" alt="shape-img" />
+                                </div>
+                                <div class="shape-img img-2">
+                                    <img src="./assets//img/main-demo/shape2.png" alt="shape-img" />
+                                </div>
+                            </div>
+
+                            <div class="section-title text-center md-mb-40" data-aos="fade-up">
+                                <h2 class="white-color">
+                                    لوحــة تحكـم  لإدارة 
+                                    التطبيــق
+                                </h2>
+                            </div>
+
+                            <div class="usability-slider-nav" data-aos="fade-up" data-aos-delay="200">
+                                <div class="slider-item">
+                                    <img src="./assets//img/main-demo/emoji-happy.png" alt="icon" />
+                                    <span>إدخال البيانات</span>
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets//img/main-demo/pet.png" alt="icon" />
+                                    <span>إدارة العمليات والصلاحيات</span>
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets//img/main-demo/mouse-circle.png" alt="icon" />
+                                    <span>التقارير والإحصائيات</span>
+                                </div>
+                            </div>
+                            <div class="usability-slider-for" data-aos="fade-up" data-aos-delay="400">
+                                <div class="slider-item">
+                                    <img src="./assets//img/main-demo/data-entry.jpg" alt="usability-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets//img/main-demo/manage.jpg" alt="usability-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets//img/main-demo/reports.jpg" alt="usability-img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- usability section end -->
+
+
+        <!-- virtually section start -->
+        <section id="website" class="virtually-section">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="virtually-img">
+                            <img src="./assets/img/madrasti/website.png" alt="virtually-img" />
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-7" data-aos="fade-left">
+                        <div class="virtually-card">
+                            <div class="section-title">
+                                <span class="sub-title">الموقع الإلكتروني</span>
+                                <h2 class="title mb-0">
+                                    اشترك في تطبيق معهدي <br />
+                                    واحصل <span class="marketing-badge">مجاناً </span>على موقع <br>
+                                    إلكتروني لمعهدك
+
+                                </h2>
+                            </div>
+
+                            <div class="virtually-content">
+                                <h2>اجعل معهدك أكثر إنتشاراً</h2>
+                                <p class="xl-mb-20">
+                                    موقع إلكتروني يسهل الوصول الى المعهد ويمكن إدارة المعهد من عرض التفاصيل والمعلومات التي تريد مشاركتها للجمهور .. وتستطيع من خلاله إدارة المعهد استقبال طلبات التوظيف وتسجيل الطلاب عن بعد
+                                </p>
+                                <ul class="list">
+                                    <li>
+                                        <div class="list-item">
+                                            <span class="iconify" data-icon="bi:check-lg"></span>
+                                            <p>كن قريباً من جمهورك</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-item">
+                                            <span class="iconify" data-icon="bi:check-lg"></span>
+                                            <p>شارك التفاصيل التي تريدها معهم</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-item">
+                                            <span class="iconify" data-icon="bi:check-lg"></span>
+                                            <p>استقبل طلبات التوظيف عن بعد</p>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="list-item">
+                                            <span class="iconify" data-icon="bi:check-lg"></span>
+                                            <p>سجل الطلاب عن بعد</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- virtually section end -->
+
+        <!-- Brands slider section start -->
+        <section class="brands-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <span class="sub-title">عملاء معهدي </span>
+                            <h2 class="title">من أبرز  العملاء</h2>
+                        </div>
+                        <div class="brands-slider" dir="ltr">
+                            <div class="brands-slider-container">
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/1.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/2.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/3.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/4.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/5.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/6.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/7.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/8.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/9.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/10.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/11.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/12.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/13.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/14.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/15.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/16.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/17.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/18.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/19.png" alt="slider-img" />
+                                </div>
+                                <div class="slider-item">
+                                    <img src="./assets/images/brands/20.png" alt="slider-img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Brands slider section end -->
+
+        <!-- Stay connect Section Start -->
+        <section class="stay-connect-section d-none">
+            <div class="container">
+                <div class="stay-connect-content">
+                    <div class="stay-connect-round-shape">
+                        <img src="./assets/img/app/stay-connect-round-shape.png" alt="icon" />
+                    </div>
+                    <img src="./assets/img/app/stay-connect-mash-grade.png" alt="img" class="stay-connect-mash-grade" />
+                    
+                    <div class="section-title text-center mb-0">
+                        <h2 class="title text-white">حمل النسخة التجريية الآن</h2>
+                        <h5 class="dm-sans text-white">وتصفح أبرز الميزات والخدمات التي نقدمها لك.</h5>
+                    </div>
+                    
+                    <div class="stay-connect-btns">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="https://play.google.com" target="_blank">
+                                    
+                                    <h5 class="dm-sans">
+                                        <span> تحميل من</span>
+                                        جوجل بلاي
+                                    </h5>
+                                    <img src="./assets/img/app/play_store.svg" alt="playstore" />
+                                </a>
+                                <div class="qr-code">
+                                    <div class="qr-code-img">
+                                        <img src="./assets/img/app/play-store-qr-code.png" alt="qu-code">
+                                    </div>
+                                    <p class="text-white">43M+ تحميل</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="https://www.apple.com/app-store" target="_blank">
+                                    
+                                    <h5 class="dm-sans">
+                                        <span>تحميل من</span>
+                                        سوق آبل
+                                    </h5>
+                                    <img src="./assets/img/app/app_store.svg" alt="playstore" />
+                                </a>
+                                <div class="qr-code">
+                                    <div class="qr-code-img">
+                                        <img src="./assets/img/app/app-store-qr-code.png" alt="qu-code">
+                                    </div>
+                                    <p class="text-white">25M+ تحميل</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="stay-connect-mobile-img d-none">
+            <img src="./assets/img/app/stay-connect-mockup.png" alt="img" />
+        </div>
+        <!-- Stay connect Section End -->
+        
+        <!-- faq section 4 start -->
+        <section class="faq-section-4 app-faq-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 off-set-lg-2">
+                        <div class="section-title text-center">
+                            <span class="sub-title">الأسئلة الشائعة</span>
+                            <h2 class="title">اهم الأسئلة الشائعة</h2>
+                        </div>
+                        <div class="faq-section-4-tab">
+                            
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="accordion theme-accordion" id="accordionGeneral">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne1">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                                هل يمكن استخدام التطبيق بدون انترنت؟
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1" data-bs-parent="#accordionGeneral">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    نعم, تم بناء تطبيق معهدي ليعمل بدون انترنت ولكن يجب الإتصال بالإنترنت لجلب البيانات الجديدة.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item collapsed">
+                                        <h2 class="accordion-header" id="headingTwo1">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                                                هل يمكنني متابعة أكثر من طفل بنفس الوقت؟
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo1" class="accordion-collapse collapse" aria-labelledby="headingTwo1" data-bs-parent="#accordionGeneral">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    نعم, نوفر لك في التطبيق خيار التنقل بين أبناءك واستعراض بياناتهم
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree1">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                                                أنا ولي أمر, كيف أطلب من المعهد تفعيل التطبيق؟
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionGeneral">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    يمكنك ارسال رابط الموقع لمعهدك واطلب منهم التواصل معنا لإضافة معهدك وبعدها تستطيع متابعة أبناءك بكل سهولة ويسر.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFour1">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour1" aria-expanded="true" aria-controls="collapseFour1">
+                                                هل استخدام التطبيق سلسل, وهل تقدمون محتوى تدريبي                                            </button>
+                                        </h2>
+                                        <div id="collapseFour1" class="accordion-collapse collapse" aria-labelledby="headingFour1" data-bs-parent="#accordionGeneral">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    تم بناء تطبيق معهدي بواجهات حديثة وواضحة ليتمكن المستخدمون من إستخدامه بسهولة ويسر ومع ذلك نوفر فديوهات تدريبية لكيفية استخدام التطبيق
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFive1">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive1" aria-expanded="false" aria-controls="collapseFive1">
+                                                عند طلب إضافة معهدي للتطبيق, كم المدة المتوقعة لإضافتها؟ 
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive1" class="accordion-collapse collapse" aria-labelledby="headingFive1" data-bs-parent="#accordionGeneral">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    خلال3 أيام - أسبوع فقط وسيتم إضافة معهدك الى التطبيق بعد الإتفاق على التفاصيل.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingSix1">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix1" aria-expanded="false" aria-controls="collapseSix1">
+                                                ماذا إذا حصلت مشكلة فنية, هل تلتزمون بإصلاحها
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSix1" class="accordion-collapse collapse" aria-labelledby="headingSix1" data-bs-parent="#accordionGeneral">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    بكل تأكيد نحن نوفر دعم فني مجاني طوال العام الدراسي مع الإلتزام بإصلاح الإشكاليات الفنية ومعالجتها.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-section-4-bottom">
+                            <h4>لديك اي استفسارات؟</h4>
+                            <p class="mb-0">نرحب بإرسال استفساراتك على الوتساب !!</p>
+                            <a href="https://wa.me/967775595399" class="text-link">
+                                <span>إرسال رسالة</span>
+                                <span class="iconify" data-icon="akar-icons:arrow-left"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- faq section 4 end -->
+        </div>
+
+        <!-- V7 Footer Scetion Start -->
+        <footer class="v7-footer-area">
+            <div class="footer-section-v7">
+                <img src="./assets/img/app/mesh-grad.png" alt="img" class="footer-section-mash-gard" />
+                <div class="footer-section-grain-texture">
+                    <img src="./assets/img/app/grain-texture.png" alt="img" />
+                </div>
+                <div class="container">
+                    <div class="footer-v7-content">
+                        <div class="footer-v7-text pb-3">
+                            <h2>احجز لقاء الآن<br />أو اطلب اضافة معهدك</h2>
+                            
+                            <form class="start-free-form mx-auto">
+                                <input class="form-input" type="text" placeholder="اسم المعهد" />
+                                <input class="bg-blue-btn" type="submit" value="ارسل الآن">
+                            </form>
+                        </div>
+                        <div class="v7footer-contact-card">
+                            <div class="v7footer-card-text text-right">
+                                <p>راسلنا</p>
+                                <h6><a href="mailto:info@madrasati.app">info@m3hdi.app</a></h6>
+                            </div>
+                            <div class="v7footer-card-text text-center">
+                                <p>اتصل بنا</p>
+                                <h6 dir="ltr"><a href="tel:+967775595399">+967 777-808-967</a></h6>
+                            </div>
+                            <div class="v7footer-card-text text-right">
+                                <p>تابعنا</p>
+                                <ul class="social-link">
+                                    <li>
+                                        <a href="#"><img src="./assets/images/icons/facebook.svg" alt="social-icon" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./assets/images/icons/icon_email.svg" alt="social-icon" /></a>
+                                    </li>
+                                    <li class="d-none">
+                                        <a href="#"><img src="./assets/images/icons/instagram.svg" alt="social-icon" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/96777808967"><img src="./assets/images/icons/whatsapp.svg" alt="social-icon" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="v7-main-footer">
+                            <p class="copyright-text mb-0">  جميع الحقوق محفوظة  لـ فريق <a href="#"> ROE 2025</a></p>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- V7 Footer Scetion End -->
+
+        <!-- scroll top section start -->
+        <div class="staco-scroll-top crypto2">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+            <div class="staco-scroll-top-icon crypto2">
+                <span class="iconify" data-icon="mdi:arrow-up"></span>
+            </div>
+        </div>
+        <!-- scroll top section end -->
+
+        <!-- All javascript files included here -->
+        <!-- jQuery v3.6.1 js -->
+        <script src="./assets/js/jquery-3.6.1.min.js"></script>
+        <!-- popper v2.11.6 js -->
+        <script src="./assets/js/popper.min.js"></script>
+        <!-- Bootstrap  v5.2.1 js -->
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <!-- masonry js -->
+        <script src="./assets/js/masonry.pkgd.min.js"></script>
+        <!-- Iconify v3.0.0 js -->
+        <script src="./assets/js/iconify.min.js"></script>
+        <!-- modernizr js -->
+        <script src="./assets/js/modernizr.js"></script>
+        <!-- slick slider js -->
+        <script src="./assets/js/slick.min.js"></script>
+        <!-- swiper slider js --->
+        <script src="./assets/js/swiper.min.js"></script>
+        <!-- pie progress js -->
+        <script src="./assets/js/jquery-asPieProgress.js"></script>
+        <!-- VenoBox 2.0.4 js -->
+        <script src="./assets/js/venobox.min.js"></script>
+        <!-- Splitting js -->
+        <script src="./assets/js/splitting.js"></script>
+        <script src="./assets/js/splitting-out.js"></script>
+        <!-- jquery.rollNumber js -->
+        <script src="./assets/js/jquery.rollNumber.js"></script>
+        <!-- parallax js -->
+        <script src="./assets/js/parallax.min.js"></script>
+        <!-- ScrollTrigger 3.11.2 js -->
+        <script src="./assets/js/ScrollTrigger.min.js"></script>
+        <!-- Headline.js -->
+        <script src="./assets/js/headline.js"></script>
+        <!-- Image Light box -->
+        <script src="./assets/js/lightbox.js"></script>
+        <!-- sticky sidebar js -->
+        <script src="./assets/js/sticky-sidebar.js"></script>
+        <!-- Image Loaded js -->
+        <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
+        <!-- isotop -->
+        <script src="./assets/js/isotope.pkgd.min.js"></script>
+        <!-- darkMood tsx -->
+        <script src="./assets/js/dark-mood-js.txt"></script>
+        <!-- custom js -->
+        <script src="./assets/js/main.js"></script>
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100,
+                easing: 'ease-in-out'
+            });
+        </script>
+    </div>
+</body>
+
+</html>
