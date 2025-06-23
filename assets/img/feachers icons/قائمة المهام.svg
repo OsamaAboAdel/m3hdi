@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_ëîé_7" data-name="‘ëîé_7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.58 58.48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #004884;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <path class="cls-1" d="m47.18,3.9h-2.35v-1.95c0-1.08-.87-1.95-1.95-1.95s-1.95.87-1.95,1.95v1.95h-11.7v-1.95c0-1.08-.87-1.95-1.95-1.95s-1.95.87-1.95,1.95v1.95h-11.7v-1.95c0-1.08-.87-1.95-1.95-1.95s-1.95.87-1.95,1.95v1.95h-2.35C3.31,3.9,0,7.21,0,11.29v39.79c0,4.08,3.31,7.39,7.4,7.4h39.79c4.08,0,7.39-3.31,7.4-7.4V11.29c0-4.08-3.31-7.39-7.4-7.4Z"/>
+  </g>
+  <polyline class="cls-2" points="10.6 18.06 13.75 21.22 20.65 14.31"/>
+  <polyline class="cls-2" points="10.6 31.76 13.75 34.91 20.65 28.01"/>
+  <polyline class="cls-2" points="10.6 45.45 13.75 48.6 20.65 41.7"/>
+  <line class="cls-2" x1="27.29" y1="46" x2="46.2" y2="46"/>
+  <line class="cls-2" x1="27.29" y1="32.49" x2="46.2" y2="32.49"/>
+  <line class="cls-2" x1="27.29" y1="18.99" x2="46.2" y2="18.99"/>
+</svg>

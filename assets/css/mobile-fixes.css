@@ -1,0 +1,111 @@
+/* Mobile fixes */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .mobile-navbar-menu .nav-menu,
+  .mobile-navbar-menu .nav-buttons {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.protect-data-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.protect-data-section .protect-data-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.protect-data-section .protect-data-content .protect-data-text {
+  max-width: none;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .protect-data-section {
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  
+  .protect-data-section .protect-data-content {
+    flex-direction: column;
+  }
+
+  .protect-data-section .protect-data-content .protect-data-text p{
+    text-align: center;
+  }
+
+  .app-convert-visitors-nav {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .app-convert-visitors-nav .swiper {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .app-convert-visitors-nav .app-nav-list {
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .app-convert-visitors-nav .app-nav-list .nav-item {
+    width: auto !important;
+    max-width: none !important;
+    min-width: auto !important;
+    padding: 0 5px !important;
+    flex-shrink: 0;
+  }
+
+  .app-convert-visitors-nav .app-nav-list .nav-item .tab-btn {
+    height: 40px !important;
+    font-size: 12px !important;
+    padding: 0 5px !important;
+    border-radius: 5px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: auto;
+    min-width: fit-content;
+  }
+
+  .app-convert-visitors-nav .app-nav-list .nav-item .tab-btn::before {
+    height: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .protect-data-section .protect-data-content {
+
+  }
+  .app-convert-visitors-nav {
+    top: -650px;
+}
+}
